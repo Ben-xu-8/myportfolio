@@ -5,7 +5,7 @@ const Container = styled.div``;
 const Wrapper = styled.div``;
 const ImageContainer = styled.div``;
 const Image = styled.img`
-  height: 25%;
+  height: 50%;
   width: 50%;
 `;
 const Title = styled.div``;
@@ -16,7 +16,7 @@ const Introduction = () => {
     <Container>
       <Wrapper>
         <ImageContainer>
-          <Image src={'coffeeshop.png'} />
+          <Image src={'coffeeplant.jpeg'} />
         </ImageContainer>
         <Title></Title>
         <Intro></Intro>
