@@ -2,14 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div``;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+`;
 const ImageContainer = styled.div``;
 const Image = styled.img`
-  height: 50%;
-  width: 50%;
+  max-height: 87%;
 `;
-const Title = styled.div``;
-const Intro = styled.div``;
+
+const Description = styled.span`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0px 0px 0px 50px;
+`;
+
+const Title = styled.h1`
+  font-family: Inconsolata;
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+`;
+const Intro = styled.h2`
+  font-size: 1.2rem;
+`;
 
 const Introduction = () => {
   return (
@@ -18,8 +36,10 @@ const Introduction = () => {
         <ImageContainer>
           <Image src={'coffeeplant.jpeg'} />
         </ImageContainer>
-        <Title></Title>
-        <Intro></Intro>
+        <Description>
+          <Title>I'm Ben.</Title>
+          <Intro>A SOFTWARE ENGINEER.</Intro>
+        </Description>
       </Wrapper>
     </Container>
   );
