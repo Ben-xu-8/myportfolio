@@ -6,37 +6,45 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Container = styled.div`
   background-color: #94b49f;
+  height: 100px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: space-around;
+`;
+
+const Logo = styled.div`
+  padding-top: 30px;
+  padding-left: 10px;
+`;
+
+const Image = styled.img`
+  width: 20%;
 `;
 
 const Left = styled.div`
   display: flex;
-  justify-content: space-around;
 `;
 
-const Logo = styled.div``;
-
-const Image = styled.img`
-  padding-left: 130px;
-  display: flex;
-  width: 30%;
+const Title = styled.div`
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
-
-const Title = styled.div``;
 
 const List = styled.div`
   display: flex;
 `;
 
 const ListItem = styled.div`
-  padding: 30px 0px 0px 30px;
+  padding: 50px 0px 0px 30px;
 `;
 
 const SocialContainer = styled.div`
-  /* padding: 30px 0px 0px 100px; */
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
 `;
 const Social = styled.div`
   display: flex;
@@ -50,24 +58,21 @@ const Footer = () => {
           <Logo>
             <Image src={'logo.png'} />
           </Logo>
-          <Title>
-            <List>
-              <ListItem>Home</ListItem>
-              <ListItem>About</ListItem>
-              <ListItem>Skills</ListItem>
-              <ListItem>Projects</ListItem>
-              <ListItem>Contact</ListItem>
-            </List>
-          </Title>
-          <SocialContainer>
-            <Title>Socials</Title>
-            <Social>
-              <GitHubIcon />
-              <LinkedInIcon />
-              <EmailIcon />
-            </Social>
-          </SocialContainer>
+          <List>
+            <ListItem>Home</ListItem>
+            <ListItem>About</ListItem>
+            <ListItem>Skills</ListItem>
+            <ListItem>Projects</ListItem>
+            <ListItem>Contact</ListItem>
+          </List>
         </Left>
+        <SocialContainer>
+          <Social>
+            <GitHubIcon />
+            <LinkedInIcon />
+            <EmailIcon />
+          </Social>
+        </SocialContainer>
       </Wrapper>
     </Container>
   );

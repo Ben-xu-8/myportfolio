@@ -56,10 +56,10 @@ const SkillIcon = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
 `;
 const IconName = styled.span`
-  font-size: 20px;
+  font-size: 14px;
 `;
 
 const AboutMe = () => {
