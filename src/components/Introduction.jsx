@@ -60,7 +60,7 @@ const ArrowImage = styled.img`
 
 const Introduction = () => {
   useEffect(() => {
-    AOS.init({});
+    AOS.init({ duration: 3000 });
   });
   return (
     <Container>

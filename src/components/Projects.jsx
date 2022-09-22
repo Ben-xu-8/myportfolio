@@ -24,7 +24,7 @@ const ProjectTitle = styled.div``;
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({});
+    AOS.init({ duration: 3000 });
   });
   return (
     <Container id='projects'>
