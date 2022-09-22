@@ -62,7 +62,7 @@ const Introduction = () => {
   useEffect(() => {
     AOS.init({
       delay: 1000,
-      duration: 1500,
+      duration: 1000,
       once: false,
       mirror: true,
       easing: 'ease',
