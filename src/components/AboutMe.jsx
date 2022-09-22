@@ -75,7 +75,7 @@ const IconName = styled.span`
 const AboutMe = () => {
   useEffect(() => {
     AOS.init({
-      delay: 500,
+      delay: 1000,
       duration: 1500,
       once: false,
       mirror: true,

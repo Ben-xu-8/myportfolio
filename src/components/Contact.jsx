@@ -78,7 +78,7 @@ const Button = styled.button`
 const Contact = () => {
   useEffect(() => {
     AOS.init({
-      delay: 500,
+      delay: 1000,
       duration: 1500,
       once: false,
       mirror: true,
