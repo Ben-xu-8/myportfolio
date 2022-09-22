@@ -78,7 +78,7 @@ const Button = styled.button`
 const Contact = () => {
   useEffect(() => {
     AOS.init({
-      delay: 300,
+      delay: 500,
       duration: 1500,
       once: false,
       mirror: true,
@@ -87,10 +87,14 @@ const Contact = () => {
   });
   return (
     <Container>
-      <Wrapper data-aos='zoom-in'>
+      <Wrapper data-aos='zoom-in' data-aos-mirror='true' data-aos-once='false'>
         <TitleContainer>
           <Title>Let's Connect</Title>
-          <Description id='contact'>
+          <Description
+            id='contact'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             Feel free to reach out if you're ever interested in a quick chat or
             just to exchange contacts. My socials are found below and as well as
             a contact form
