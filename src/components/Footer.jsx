@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import { Link } from 'react-scroll';
 
 const Container = styled.div`
   background-color: #94b49f;
@@ -29,6 +30,7 @@ const Left = styled.div`
 
 const List = styled.div`
   display: flex;
+  cursor: pointer;
 `;
 
 const ListItem = styled.div`
@@ -53,11 +55,21 @@ const Footer = () => {
             <Image src={'logo.png'} />
           </Logo>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>About</ListItem>
-            <ListItem>Skills</ListItem>
-            <ListItem>Projects</ListItem>
-            <ListItem>Contact</ListItem>
+            <Link to='home' spy={true} smooth={true}>
+              <ListItem>Home</ListItem>
+            </Link>
+            <Link to='about' spy={true} smooth={true}>
+              <ListItem>About</ListItem>
+            </Link>
+            <Link to='skills' spy={true} smooth={true}>
+              <ListItem>Skills</ListItem>
+            </Link>
+            <Link to='projects' spy={true} smooth={true}>
+              <ListItem>Projects</ListItem>
+            </Link>
+            <Link to='contact' spy={true} smooth={true}>
+              <ListItem>Contact</ListItem>
+            </Link>
           </List>
         </Left>
         <SocialContainer>

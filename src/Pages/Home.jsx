@@ -1,21 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
 import AboutMe from '../components/AboutMe';
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
 import Navigationbar from '../components/Navigationbar';
+import Projects from '../components/Projects';
+
+const Container = styled.div`
+  overflow-x: hidden;
+`;
 
 const Home = () => {
   return (
-    <div>
+    <Container>
       <Navigationbar />
       <Introduction />
-      <Banner />
+      <Projects />
       <AboutMe />
       <Contact />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const Container = styled.div`
   height: 90px;
@@ -35,7 +36,7 @@ const NavElement = styled.div`
 
 const Navigationbar = () => {
   return (
-    <Container>
+    <Container id='home'>
       <Wrapper>
         <Navbar>
           <Left>
@@ -46,10 +47,18 @@ const Navigationbar = () => {
           <Right>
             <Nav>
               <NavElement>HOME</NavElement>
-              <NavElement>ABOUT</NavElement>
-              <NavElement>SKILL</NavElement>
-              <NavElement>PROJECTS</NavElement>
-              <NavElement>CONTACT</NavElement>
+              <Link to='about' spy={true} smooth={true}>
+                <NavElement>ABOUT</NavElement>
+              </Link>
+              <Link to='skills' spy={true} smooth={true}>
+                <NavElement>SKILL</NavElement>
+              </Link>
+              <Link to='projects' spy={true} smooth={true}>
+                <NavElement>PROJECTS</NavElement>
+              </Link>
+              <Link to='contact' spy={true} smooth={true}>
+                <NavElement>CONTACT</NavElement>
+              </Link>
             </Nav>
           </Right>
         </Navbar>

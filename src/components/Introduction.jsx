@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
+import { Link } from 'react-scroll';
+import 'aos/dist/aos.css';
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  height: max-content;
+`;
 const Image = styled.img`
-  max-height: 87%;
+  max-height: 80%;
+  width: 95%;
 `;
+
+const Top = styled.div`
+  display: flex;
+`;
+const Bottom = styled.div``;
 
 const Description = styled.span`
   display: flex;
@@ -28,18 +40,50 @@ const Title = styled.h1`
 const Intro = styled.h2`
   font-size: 1.2rem;
 `;
+const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+const Learn = styled.span`
+  cursor: pointer;
+`;
+
+const ArrowImage = styled.img`
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+`;
 
 const Introduction = () => {
+  useEffect(() => {
+    AOS.init({});
+  });
   return (
     <Container>
-      <Wrapper>
-        <ImageContainer>
-          <Image src={'coffeeplant.jpeg'} />
-        </ImageContainer>
-        <Description>
-          <Title>I'm Ben.</Title>
-          <Intro>A SOFTWARE ENGINEER.</Intro>
-        </Description>
+      <Wrapper data-aos='fade-up'>
+        <Top>
+          <ImageContainer>
+            <Image src={'coffeeplant.jpeg'} />
+          </ImageContainer>
+          <Description>
+            <Title>I'm Ben.</Title>
+            <Intro>A SOFTWARE ENGINEER.</Intro>
+          </Description>
+        </Top>
+        <Bottom>
+          <Banner>
+            <Link to='projects' spy={true} smooth={true}>
+              <Learn> Learn More </Learn>
+            </Link>
+            <Link to='projects' spy={true} smooth={true}>
+              <ArrowImage src={'down-arrow.gif'} />
+            </Link>
+          </Banner>
+        </Bottom>
       </Wrapper>
     </Container>
   );
