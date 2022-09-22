@@ -64,12 +64,32 @@ const Introduction = () => {
   });
   return (
     <Container>
-      <Wrapper data-aos='fade-up'>
-        <Top data-aos='fade-up'>
-          <ImageContainer data-aos='fade-up'>
+      <Wrapper
+        data-aos='fade-up'
+        data-aos-duration='2000'
+        data-aos-mirror='true'
+        data-aos-once='false'
+      >
+        <Top
+          data-aos='fade-up'
+          data-aos-duration='2000'
+          data-aos-mirror='true'
+          data-aos-once='false'
+        >
+          <ImageContainer
+            data-aos='fade-up'
+            data-aos-duration='2000'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             <Image src={'coffeeplant.jpeg'} />
           </ImageContainer>
-          <Description data-aos='fade-up'>
+          <Description
+            data-aos='fade-up'
+            data-aos-duration='2000'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             <Title>I'm Ben.</Title>
             <Intro>A SOFTWARE ENGINEER.</Intro>
           </Description>

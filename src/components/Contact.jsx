@@ -77,11 +77,16 @@ const Button = styled.button`
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({ once: false, mirror: true, easing: 'ease' });
+    AOS.init({ duration: 1500, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
-      <Wrapper data-aos='zoom-in'>
+      <Wrapper
+        data-aos='zoom-in'
+        data-aos-duration='1000'
+        data-aos-mirror='true'
+        data-aos-once='false'
+      >
         <TitleContainer>
           <Title>Let's Connect</Title>
           <Description id='contact'>
