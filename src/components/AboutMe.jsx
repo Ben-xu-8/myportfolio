@@ -86,11 +86,23 @@ const AboutMe = () => {
     <Container>
       <Wrapper>
         <Top id='about'>
-          <Info data-aos='fade-right'>
-            <TitleContainer data-aos='fade-right'>
+          <Info
+            data-aos='fade-right'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
+            <TitleContainer
+              data-aos='fade-right'
+              data-aos-mirror='true'
+              data-aos-once='false'
+            >
               <Title>About Me</Title>
             </TitleContainer>
-            <DescriptionContainer data-aos='fade-right'>
+            <DescriptionContainer
+              data-aos='fade-right'
+              data-aos-mirror='true'
+              data-aos-once='false'
+            >
               <Description>
                 Previously a mechanical engineer now turned to software, I have
                 developed a passion for coding. I love being challenged and
@@ -105,8 +117,18 @@ const AboutMe = () => {
           </ImageContainer>
         </Top>
         <Bottom id='skills'>
-          <Title data-aos='fade-up'>Skills</Title>
-          <Skill data-aos='fade-up'>
+          <Title
+            data-aos='fade-up'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
+            Skills
+          </Title>
+          <Skill
+            data-aos='fade-up'
+            data-aos-mirror='true'
+            data-aos-once='false'
+          >
             <SkillIconsDescription>
               <SkillIcon>
                 <FontAwesomeIcon icon={faHtml5} />

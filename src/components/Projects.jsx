@@ -34,10 +34,14 @@ const Projects = () => {
   });
   return (
     <Container id='projects'>
-      <Wrapper data-aos='zoom-in'>
+      <Wrapper data-aos='zoom-in' data-aos-mirror='true' data-aos-once='false'>
         <Title>Projects</Title>
         <Intro>Click on the Image to Learn More!</Intro>
-        <Project data-aos='zoom-in'>
+        <Project
+          data-aos='zoom-in'
+          data-aos-mirror='true'
+          data-aos-once='false'
+        >
           <ProjectItem>
             <ProjectImg></ProjectImg>
             <ProjectTitle></ProjectTitle>
