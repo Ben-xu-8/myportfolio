@@ -81,10 +81,10 @@ const AboutMe = () => {
       <Wrapper>
         <Top id='about'>
           <Info data-aos='fade-right'>
-            <TitleContainer>
+            <TitleContainer data-aos='fade-right'>
               <Title>About Me</Title>
             </TitleContainer>
-            <DescriptionContainer>
+            <DescriptionContainer data-aos='fade-right'>
               <Description>
                 Previously a mechanical engineer now turned to software, I have
                 developed a passion for coding. I love being challenged and
