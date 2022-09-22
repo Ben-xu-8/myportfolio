@@ -60,16 +60,16 @@ const ArrowImage = styled.img`
 
 const Introduction = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false, mirror: false, easing: 'ease' });
+    AOS.init({ duration: 2000, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
       <Wrapper data-aos='fade-up'>
-        <Top>
-          <ImageContainer>
+        <Top data-aos='fade-up'>
+          <ImageContainer data-aos='fade-up'>
             <Image src={'coffeeplant.jpeg'} />
           </ImageContainer>
-          <Description>
+          <Description data-aos='fade-up'>
             <Title>I'm Ben.</Title>
             <Intro>A SOFTWARE ENGINEER.</Intro>
           </Description>

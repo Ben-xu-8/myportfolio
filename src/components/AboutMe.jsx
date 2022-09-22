@@ -74,7 +74,7 @@ const IconName = styled.span`
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false, mirror: false, easing: 'ease' });
+    AOS.init({ duration: 1500, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>

@@ -24,11 +24,11 @@ const ProjectTitle = styled.div``;
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false, mirror: false, easing: 'ease' });
+    AOS.init({ duration: 2000, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container id='projects'>
-      <Wrapper>
+      <Wrapper data-aos='zoom-in'>
         <Title>Projects</Title>
         <Intro>Click on the Image to Learn More!</Intro>
         <Project data-aos='zoom-in'>
