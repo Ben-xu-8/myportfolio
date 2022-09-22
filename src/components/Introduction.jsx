@@ -54,13 +54,13 @@ const Learn = styled.span`
 
 const ArrowImage = styled.img`
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 `;
 
 const Introduction = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false, mirror: true, easing: 'ease' });
+    AOS.init({ once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>

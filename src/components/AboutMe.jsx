@@ -74,7 +74,7 @@ const IconName = styled.span`
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({ duration: 1500, once: false, mirror: true, easing: 'ease' });
+    AOS.init({ once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
@@ -94,8 +94,8 @@ const AboutMe = () => {
               </Description>
             </DescriptionContainer>
           </Info>
-          <ImageContainer data-aos='fade-left'>
-            <Image src={'myself.jpg'} />
+          <ImageContainer>
+            <Image src={'myself.jpg'} alt='' data-aos='fade-left' />
           </ImageContainer>
         </Top>
         <Bottom id='skills'>

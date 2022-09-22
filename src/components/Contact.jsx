@@ -77,7 +77,7 @@ const Button = styled.button`
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({ duration: 2000, once: false, mirror: true, easing: 'ease' });
+    AOS.init({ once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
