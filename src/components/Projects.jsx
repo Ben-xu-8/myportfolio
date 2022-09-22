@@ -25,7 +25,7 @@ const ProjectTitle = styled.div``;
 const Projects = () => {
   useEffect(() => {
     AOS.init({
-      delay: 500,
+      delay: 300,
       duration: 1500,
       once: false,
       mirror: true,
