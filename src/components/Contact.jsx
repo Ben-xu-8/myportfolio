@@ -77,7 +77,7 @@ const Button = styled.button`
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({});
   });
   return (
     <Container>
