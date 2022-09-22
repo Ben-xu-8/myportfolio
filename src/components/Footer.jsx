@@ -27,12 +27,6 @@ const Left = styled.div`
   display: flex;
 `;
 
-const Title = styled.div`
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-`;
-
 const List = styled.div`
   display: flex;
 `;

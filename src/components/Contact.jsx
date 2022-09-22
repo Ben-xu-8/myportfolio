@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Container = styled.div`
   background-color: #cee5d0;
@@ -18,7 +21,11 @@ const Title = styled.h1`
   font-weight: 400;
 `;
 
+const SocialContainer = styled.div``;
+const Social = styled.div``;
+
 const Description = styled.p``;
+
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,6 +61,13 @@ const Contact = () => {
             just to exchange contacts. My socials are found below and as well as
             a contact form
           </Description>
+          <SocialContainer>
+            <Social>
+              <GitHubIcon />
+              <LinkedInIcon />
+              <EmailIcon />
+            </Social>
+          </SocialContainer>
         </TitleContainer>
         <ContactInfo>
           <Name placeholder='Name'></Name>
