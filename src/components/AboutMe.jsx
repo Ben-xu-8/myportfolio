@@ -74,7 +74,7 @@ const IconName = styled.span`
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({ once: false, mirror: true, easing: 'ease' });
+    AOS.init({ delay: 500, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
@@ -85,6 +85,7 @@ const AboutMe = () => {
             data-aos-duration='2000'
             data-aos-mirror='true'
             data-aos-once='false'
+            data-aos-delay='1000'
           >
             <TitleContainer
               data-aos='fade-right'

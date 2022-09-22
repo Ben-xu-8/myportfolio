@@ -60,7 +60,7 @@ const ArrowImage = styled.img`
 
 const Introduction = () => {
   useEffect(() => {
-    AOS.init({ once: false, mirror: true, easing: 'ease' });
+    AOS.init({ delay: 500, once: false, mirror: true, easing: 'ease' });
   });
   return (
     <Container>
