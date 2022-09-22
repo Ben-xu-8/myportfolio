@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import AboutMe from '../components/AboutMe';
-import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
