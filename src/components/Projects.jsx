@@ -24,24 +24,20 @@ const ProjectTitle = styled.div``;
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({ delay: 500, once: false, mirror: true, easing: 'ease' });
+    AOS.init({
+      delay: 500,
+      duration: 1500,
+      once: false,
+      mirror: true,
+      easing: 'ease',
+    });
   });
   return (
     <Container id='projects'>
-      <Wrapper
-        data-aos='zoom-in'
-        data-aos-duration='2000'
-        data-aos-mirror='true'
-        data-aos-once='false'
-      >
+      <Wrapper data-aos='zoom-in'>
         <Title>Projects</Title>
         <Intro>Click on the Image to Learn More!</Intro>
-        <Project
-          data-aos='zoom-in'
-          data-aos-duration='2000'
-          data-aos-mirror='true'
-          data-aos-once='false'
-        >
+        <Project data-aos='zoom-in'>
           <ProjectItem>
             <ProjectImg></ProjectImg>
             <ProjectTitle></ProjectTitle>

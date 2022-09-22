@@ -60,36 +60,22 @@ const ArrowImage = styled.img`
 
 const Introduction = () => {
   useEffect(() => {
-    AOS.init({ delay: 500, once: false, mirror: true, easing: 'ease' });
+    AOS.init({
+      delay: 500,
+      duration: 1500,
+      once: false,
+      mirror: true,
+      easing: 'ease',
+    });
   });
   return (
     <Container>
-      <Wrapper
-        data-aos='fade-up'
-        data-aos-duration='2000'
-        data-aos-mirror='true'
-        data-aos-once='false'
-      >
-        <Top
-          data-aos='fade-up'
-          data-aos-duration='2000'
-          data-aos-mirror='true'
-          data-aos-once='false'
-        >
-          <ImageContainer
-            data-aos='fade-up'
-            data-aos-duration='2000'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+      <Wrapper data-aos='fade-up'>
+        <Top data-aos='fade-up'>
+          <ImageContainer data-aos='fade-up'>
             <Image src={'coffeeplant.jpeg'} />
           </ImageContainer>
-          <Description
-            data-aos='fade-up'
-            data-aos-duration='2000'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <Description data-aos='fade-up'>
             <Title>I'm Ben.</Title>
             <Intro>A SOFTWARE ENGINEER.</Intro>
           </Description>

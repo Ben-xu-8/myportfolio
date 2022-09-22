@@ -74,33 +74,23 @@ const IconName = styled.span`
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({ delay: 500, once: false, mirror: true, easing: 'ease' });
+    AOS.init({
+      delay: 1000,
+      duration: 1500,
+      once: false,
+      mirror: true,
+      easing: 'ease',
+    });
   });
   return (
     <Container>
       <Wrapper>
         <Top id='about'>
-          <Info
-            data-aos='fade-right'
-            data-aos-duration='2000'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            data-aos-delay='1000'
-          >
-            <TitleContainer
-              data-aos='fade-right'
-              data-aos-duration='2000'
-              data-aos-mirror='true'
-              data-aos-once='false'
-            >
+          <Info data-aos='fade-right'>
+            <TitleContainer data-aos='fade-right'>
               <Title>About Me</Title>
             </TitleContainer>
-            <DescriptionContainer
-              data-aos='fade-right'
-              data-aos-duration='2000'
-              data-aos-mirror='true'
-              data-aos-once='false'
-            >
+            <DescriptionContainer data-aos='fade-right'>
               <Description>
                 Previously a mechanical engineer now turned to software, I have
                 developed a passion for coding. I love being challenged and
@@ -111,31 +101,12 @@ const AboutMe = () => {
             </DescriptionContainer>
           </Info>
           <ImageContainer>
-            <Image
-              src={'myself.jpg'}
-              alt=''
-              data-aos='fade-left'
-              data-aos-duration='2000'
-              data-aos-mirror='true'
-              data-aos-once='false'
-            />
+            <Image src={'myself.jpg'} alt='' />
           </ImageContainer>
         </Top>
         <Bottom id='skills'>
-          <Title
-            data-aos='fade-up'
-            data-aos-duration='2000'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
-            Skills
-          </Title>
-          <Skill
-            data-aos='fade-up'
-            data-aos-duration='2000'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <Title data-aos='fade-up'>Skills</Title>
+          <Skill data-aos='fade-up'>
             <SkillIconsDescription>
               <SkillIcon>
                 <FontAwesomeIcon icon={faHtml5} />
