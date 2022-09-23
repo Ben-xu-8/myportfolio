@@ -47,14 +47,14 @@ const Navigationbar = () => {
           <Right>
             <Nav>
               <NavElement>HOME</NavElement>
+              <Link to='projects' spy={true} smooth={true}>
+                <NavElement>PROJECTS</NavElement>
+              </Link>
               <Link to='about' spy={true} smooth={true}>
                 <NavElement>ABOUT</NavElement>
               </Link>
               <Link to='skills' spy={true} smooth={true}>
                 <NavElement>SKILL</NavElement>
-              </Link>
-              <Link to='projects' spy={true} smooth={true}>
-                <NavElement>PROJECTS</NavElement>
               </Link>
               <Link to='contact' spy={true} smooth={true}>
                 <NavElement>CONTACT</NavElement>
