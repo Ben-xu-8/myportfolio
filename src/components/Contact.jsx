@@ -105,10 +105,10 @@ const Contact = () => {
           </SocialContainer>
         </TitleContainer>
         <ContactInfo method='POST' data-netlify='true'>
-          <Name placeholder='Name'></Name>
-          <Phone placeholder='Phone'></Phone>
-          <Email placeholder='Email'></Email>
-          <Message placeholder='Message'></Message>
+          <Name placeholder='Name' type='text' name='text'></Name>
+          <Phone placeholder='Phone' type='tel' name='tel'></Phone>
+          <Email placeholder='Email' type='email' name='email'></Email>
+          <Message placeholder='Message' type='text' name='text'></Message>
           <Button type='submit'>Submit Form</Button>
         </ContactInfo>
       </Wrapper>
