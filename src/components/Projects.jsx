@@ -17,9 +17,18 @@ const Title = styled.h1`
   font-weight: 400;
 `;
 const Header = styled(motion.div)``;
-const Project = styled.div``;
-const ProjectItem = styled.div``;
-const ProjectImg = styled.img``;
+const Project = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+`;
+const ProjectItem = styled(motion.div)``;
+const ProjectImg = styled.img`
+  height: 50%;
+  width: 50%;
+  border-radius: 20px;
+`;
 const ProjectTitle = styled.div``;
 
 const Projects = () => {
@@ -27,8 +36,8 @@ const Projects = () => {
     <Container id='projects'>
       <Wrapper>
         <Header
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false }}
           transition={{
             duration: 1.5,
@@ -38,8 +47,15 @@ const Projects = () => {
           <Intro>Click on the Image to Learn More!</Intro>
         </Header>
         <Project>
-          <ProjectItem>
-            <ProjectImg></ProjectImg>
+          <ProjectItem
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
+            <ProjectImg src='project1.png' />
             <ProjectTitle></ProjectTitle>
           </ProjectItem>
           <ProjectItem>
