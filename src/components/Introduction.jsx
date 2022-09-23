@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import AOS from 'aos';
+import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import 'aos/dist/aos.css';
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const ImageContainer = styled.div`
+const ImageContainer = styled(motion.div)`
   height: max-content;
 `;
-const Image = styled.img`
+const Image = styled(motion.img)`
   max-height: 80%;
   width: 95%;
 `;
@@ -22,7 +21,7 @@ const Top = styled.div`
 `;
 const Bottom = styled.div``;
 
-const Description = styled.span`
+const Description = styled(motion.span)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -40,7 +39,7 @@ const Title = styled.h1`
 const Intro = styled.h2`
   font-size: 1.2rem;
 `;
-const Banner = styled.div`
+const Banner = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,46 +49,55 @@ const Banner = styled.div`
 
 const Learn = styled.span`
   cursor: pointer;
+  margin-bottom: 20px;
 `;
 
 const ArrowImage = styled.img`
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  margin-top: -5px;
   width: 70px;
   height: 70px;
 `;
 
 const Introduction = () => {
-  useEffect(() => {
-    AOS.init({
-      delay: 1000,
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: 'ease',
-    });
-  });
   return (
     <Container>
-      <Wrapper data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>
-        <Top data-aos='fade-up' data-aos-mirror='true' data-aos-once='false'>
-          <ImageContainer
-            data-aos='fade-up'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
-            <Image src={'coffeeplant.jpeg'} />
+      <Wrapper>
+        <Top>
+          <ImageContainer>
+            <Image
+              src={'coffeeplant.jpeg'}
+              initial={{ x: -500, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 1.5,
+              }}
+            />
           </ImageContainer>
           <Description
-            data-aos='fade-up'
-            data-aos-mirror='true'
-            data-aos-once='false'
+            initial={{ x: 500, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
           >
             <Title>I'm Ben.</Title>
             <Intro>A SOFTWARE ENGINEER.</Intro>
           </Description>
         </Top>
         <Bottom>
-          <Banner>
+          <Banner
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <Link to='projects' spy={true} smooth={true}>
               <Learn> Learn More </Learn>
             </Link>

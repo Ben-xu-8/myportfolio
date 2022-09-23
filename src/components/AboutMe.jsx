@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,8 +10,7 @@ import {
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '@iconify/react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
@@ -29,11 +28,13 @@ const Top = styled.div`
 `;
 
 const TitleContainer = styled.div``;
-const Title = styled.h1`
+const Title = styled(motion.h1)`
+  margin: 0;
+  padding: 0;
   font-weight: 400;
 `;
 const DescriptionContainer = styled.div``;
-const Info = styled.div`
+const Info = styled(motion.div)`
   flex: 1;
   padding-right: 200px;
 `;
@@ -41,9 +42,10 @@ const Description = styled.p`
   font-size: 1.2rem;
 `;
 const ImageContainer = styled.div`
-  flex: 1;
+  height: max-content;
+  margin-top: 5px;
 `;
-const Image = styled.img`
+const Image = styled(motion.img)`
   border-radius: 5%;
   width: 65%;
 `;
@@ -58,7 +60,7 @@ const SkillIconsDescription = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 `;
-const SkillIcon = styled.div`
+const SkillIcon = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,36 +75,22 @@ const IconName = styled.span`
 `;
 
 const AboutMe = () => {
-  useEffect(() => {
-    AOS.init({
-      delay: 1000,
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: 'ease',
-    });
-  });
   return (
     <Container>
       <Wrapper>
         <Top id='about'>
           <Info
-            data-aos='fade-right'
-            data-aos-mirror='true'
-            data-aos-once='false'
+            initial={{ x: -800, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
           >
-            <TitleContainer
-              data-aos='fade-right'
-              data-aos-mirror='true'
-              data-aos-once='false'
-            >
+            <TitleContainer>
               <Title>About Me</Title>
             </TitleContainer>
-            <DescriptionContainer
-              data-aos='fade-right'
-              data-aos-mirror='true'
-              data-aos-once='false'
-            >
+            <DescriptionContainer>
               <Description>
                 Previously a mechanical engineer now turned to software, I have
                 developed a passion for coding. I love being challenged and
@@ -113,60 +101,147 @@ const AboutMe = () => {
             </DescriptionContainer>
           </Info>
           <ImageContainer>
-            <Image src={'myself.jpg'} alt='' />
+            <Image
+              initial={{ x: 500, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 1.5,
+              }}
+              src={'myself.jpg'}
+              alt=''
+            />
           </ImageContainer>
         </Top>
         <Bottom id='skills'>
           <Title
-            data-aos='fade-up'
-            data-aos-mirror='true'
-            data-aos-once='false'
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
           >
             Skills
           </Title>
-          <Skill
-            data-aos='fade-up'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <Skill>
             <SkillIconsDescription>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  duration: 1.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faHtml5} />
                 <IconName>HTML5</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faCss3} />
                 <IconName>CSS3</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 0.6,
+                  duration: 0.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faSass} />
                 <IconName>Sass</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 0.9,
+                  duration: 0.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faJs} />
                 <IconName>JavaScript</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 1.2,
+                  duration: 0.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faReact} />
                 <IconName>React</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 1.5,
+                  duration: 0.5,
+                }}
+              >
                 <Icon icon='bxl:mongodb' />
                 <IconName>MongoDB</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 1.8,
+                  duration: 0.5,
+                }}
+              >
                 <Icon icon='teenyicons:firebase-solid' />
                 <IconName>Firebase</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 2.1,
+                  duration: 0.5,
+                }}
+              >
                 <Icon icon='simple-icons:express' />
                 <IconName>Express</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 2.4,
+                  duration: 0.5,
+                }}
+              >
                 <Icon icon='akar-icons:node-fill' />
                 <IconName>Node</IconName>
               </SkillIcon>
-              <SkillIcon>
+              <SkillIcon
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  delay: 2.7,
+                  duration: 0.5,
+                }}
+              >
                 <FontAwesomeIcon icon={faGithub} />
                 <IconName>GitHub</IconName>
               </SkillIcon>

@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
@@ -9,7 +8,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px 0px 0px 100px;
+  margin: 0px 0px 0px 100px;
 `;
 
 const Intro = styled.span``;
@@ -17,31 +16,28 @@ const Intro = styled.span``;
 const Title = styled.h1`
   font-weight: 400;
 `;
+const Header = styled(motion.div)``;
 const Project = styled.div``;
 const ProjectItem = styled.div``;
 const ProjectImg = styled.img``;
 const ProjectTitle = styled.div``;
 
 const Projects = () => {
-  useEffect(() => {
-    AOS.init({
-      delay: 1000,
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: 'ease',
-    });
-  });
   return (
     <Container id='projects'>
-      <Wrapper data-aos='zoom-in' data-aos-mirror='true' data-aos-once='false'>
-        <Title>Projects</Title>
-        <Intro>Click on the Image to Learn More!</Intro>
-        <Project
-          data-aos='zoom-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
+      <Wrapper>
+        <Header
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{
+            duration: 1.5,
+          }}
         >
+          <Title>Projects</Title>
+          <Intro>Click on the Image to Learn More!</Intro>
+        </Header>
+        <Project>
           <ProjectItem>
             <ProjectImg></ProjectImg>
             <ProjectTitle></ProjectTitle>

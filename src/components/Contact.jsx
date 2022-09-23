@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
   background-color: #cee5d0;
   display: flex;
   height: 400px;
 `;
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   width: 75%;
@@ -76,25 +75,19 @@ const Button = styled.button`
 `;
 
 const Contact = () => {
-  useEffect(() => {
-    AOS.init({
-      delay: 1000,
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: 'ease',
-    });
-  });
   return (
     <Container>
-      <Wrapper data-aos='zoom-in' data-aos-mirror='true' data-aos-once='false'>
+      <Wrapper
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{
+          duration: 1.5,
+        }}
+      >
         <TitleContainer>
           <Title>Let's Connect</Title>
-          <Description
-            id='contact'
-            data-aos-mirror='true'
-            data-aos-once='false'
-          >
+          <Description>
             Feel free to reach out if you're ever interested in a quick chat or
             just to exchange contacts. My socials are found below and as well as
             a contact form
