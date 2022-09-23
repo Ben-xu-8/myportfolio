@@ -104,7 +104,7 @@ const Contact = () => {
             </Social>
           </SocialContainer>
         </TitleContainer>
-        <ContactInfo netlify>
+        <ContactInfo method='POST' data-netlify='true'>
           <Name placeholder='Name'></Name>
           <Phone placeholder='Phone'></Phone>
           <Email placeholder='Email'></Email>
