@@ -19,15 +19,22 @@ const Title = styled.h1`
 const Header = styled(motion.div)``;
 const Project = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+`;
+const ProjectItem = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  margin: 8px;
 `;
-const ProjectItem = styled(motion.div)``;
 const ProjectImg = styled.img`
-  height: 50%;
-  width: 50%;
   border-radius: 20px;
+  width: 30%;
+  height: 20%;
+  margin: 8px;
 `;
 const ProjectTitle = styled.div``;
 
@@ -40,7 +47,7 @@ const Projects = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false }}
           transition={{
-            duration: 1.5,
+            duration: 1,
           }}
         >
           <Title>Projects</Title>
@@ -48,8 +55,8 @@ const Projects = () => {
         </Header>
         <Project>
           <ProjectItem
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
               duration: 1.5,
@@ -57,17 +64,18 @@ const Projects = () => {
           >
             <ProjectImg src='project1.png' />
             <ProjectTitle></ProjectTitle>
-          </ProjectItem>
-          <ProjectItem>
-            <ProjectImg></ProjectImg>
+            <ProjectImg src='project2.png' />
             <ProjectTitle></ProjectTitle>
           </ProjectItem>
-          <ProjectItem>
-            <ProjectImg></ProjectImg>
-            <ProjectTitle></ProjectTitle>
-          </ProjectItem>
-          <ProjectItem>
-            <ProjectImg></ProjectImg>
+          <ProjectItem
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
+            <ProjectImg src='project3.png' />
             <ProjectTitle></ProjectTitle>
           </ProjectItem>
         </Project>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
   height: 90px;
@@ -9,7 +10,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div``;
 
-const Navbar = styled.div`
+const Navbar = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -38,7 +39,14 @@ const Navigationbar = () => {
   return (
     <Container id='home'>
       <Wrapper>
-        <Navbar>
+        <Navbar
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+          }}
+        >
           <Left>
             <Logo>
               <Image src={'logo2.png'} />
