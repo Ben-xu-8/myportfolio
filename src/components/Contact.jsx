@@ -108,7 +108,7 @@ const Contact = () => {
           <Name placeholder='Name' type='text' name='text'></Name>
           <Phone placeholder='Phone' type='tel' name='tel'></Phone>
           <Email placeholder='Email' type='email' name='email'></Email>
-          <Message placeholder='Message' type='text' name='text'></Message>
+          <Message placeholder='Message' type='text' name='message'></Message>
           <Button type='submit'>Submit Form</Button>
         </ContactInfo>
       </Wrapper>
