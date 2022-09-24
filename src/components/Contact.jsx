@@ -33,12 +33,12 @@ const SocialIcon = styled.div`
 
 const Description = styled.p``;
 
-// const ContactInfo = styled.form`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   padding-left: 50px;
-// `;
+const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 50px;
+`;
 
 // const Name = styled.input`
 //   width: 100%;
@@ -76,6 +76,18 @@ const Description = styled.p``;
 //   margin-top: 20px;
 // `;
 
+const input = {
+  width: '100%',
+  marginBottom: '20px',
+  borderRadius: '10px',
+  border: 'none',
+  textIndent: '10px',
+};
+
+const button = {
+  marginTop: '20px',
+};
+
 const Contact = () => {
   return (
     <Container>
@@ -106,47 +118,53 @@ const Contact = () => {
             </Social>
           </SocialContainer>
         </TitleContainer>
-        {/* <ContactInfo
-          name='contact'
-          method='POST'
-          netlify
-          data-netlify='true'
-          // data-netlify-honeypot='bot-field'
-          // data-netlify-recaptcha='true'
-          onSubmit='submit'
-        >
-          <Parse type='hidden' name='form-name' value='contact' />
+        <ContactInfo>
+          <form
+            name='contact'
+            action='/success'
+            method='POST'
+            data-netlify='true'
+          >
+            <input type='hidden' name='form-name' value='contact' />
+            <input
+              style={input}
+              type='text'
+              name='name'
+              placeholder='Name'
+              required
+            />
+            <input
+              style={input}
+              type='tel'
+              name='phone'
+              placeholder='Phone Number'
+              required
+            />
+            <input
+              style={input}
+              type='email'
+              name='email'
+              placeholder='Email'
+              required
+            />
+            <input
+              style={input}
+              type='text'
+              name='message'
+              placeholder='Message'
+              required
+            />
+            <button style={button} type='submit'>
+              Submit
+            </button>
+          </form>
+          {/* <Parse type='hidden' name='form-name' value='contact' />
           <Name placeholder='Name' type='text' name='name' />
           <Phone placeholder='Phone' type='tel' name='phone' />
           <Email placeholder='Email' type='email' name='email' />
           <Message placeholder='Message' type='text' name='message' />
-          <Button type='submit'>Submit Form</Button>
-        </ContactInfo> */}
-        <form name='contact' data-netlify='true' method='POST'>
-          <p>
-            <label>
-              Name <input type='text' name='name' />
-            </label>
-          </p>
-          <p>
-            <label>
-              Email <input type='email' name='email' />
-            </label>
-          </p>
-          <p>
-            <label>
-              Phone Number <input type='tel' name='phone' />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message <input type='text' name='message' />
-            </label>
-          </p>
-          <p>
-            <button type='submit'>Send</button>
-          </p>
-        </form>
+          <Button type='submit'>Submit Form</Button> */}
+        </ContactInfo>
       </Wrapper>
     </Container>
   );
