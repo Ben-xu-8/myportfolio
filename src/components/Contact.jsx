@@ -122,7 +122,7 @@ const Contact = () => {
           <Message placeholder='Message' type='text' name='message' />
           <Button type='submit'>Submit Form</Button>
         </ContactInfo> */}
-        <form name='contact' netlify>
+        <form name='contact' data-netlify='true' method='POST'>
           <p>
             <label>
               Name <input type='text' name='name' />
