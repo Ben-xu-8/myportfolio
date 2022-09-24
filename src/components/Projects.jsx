@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
+import {
+  faReact,
+  faHtml5,
+  faCss3,
+  faJs,
+  faGithub,
+  faSass,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
@@ -55,6 +64,7 @@ const ProjectPanel = styled.div`
 const ProjectInfo = styled.div`
   text-align: center;
 `;
+const ProjectIcon = styled.div``;
 const ProjectTitle = styled.h1``;
 const ProjectDesc = styled.span``;
 const ProjectButtons = styled.div`
@@ -99,6 +109,9 @@ const Projects = () => {
                   A real time React chatting app that uses firebase database to
                   communicate with friends
                 </ProjectDesc>
+                <ProjectIcon>
+                  React <FontAwesomeIcon icon={faReact} />
+                </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
                     onClick={(e) => {
@@ -121,7 +134,14 @@ const Projects = () => {
               </ProjectInfo>
             </ProjectPanel>
           </ProjectItem>
-          <ProjectItem>
+          <ProjectItem
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <ProjectImg src='project2.png' />
             <ProjectPanel>
               <ProjectInfo>
@@ -169,6 +189,9 @@ const Projects = () => {
                   A javascript minigame application where the user jumps over
                   the chicken as a corn on the cob
                 </ProjectDesc>
+                <ProjectIcon>
+                  React <FontAwesomeIcon icon={faHtml5} />
+                </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
                     onClick={(e) => {
