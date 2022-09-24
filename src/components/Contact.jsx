@@ -106,21 +106,47 @@ const Contact = () => {
             </Social>
           </SocialContainer>
         </TitleContainer>
-        <ContactInfo
+        {/* <ContactInfo
           name='contact'
           method='POST'
+          netlify
           data-netlify='true'
           // data-netlify-honeypot='bot-field'
           // data-netlify-recaptcha='true'
           onSubmit='submit'
         >
           <Parse type='hidden' name='form-name' value='contact' />
-          <Name placeholder='Name' type='text' name='text' />
-          <Phone placeholder='Phone' type='tel' name='tel' />
+          <Name placeholder='Name' type='text' name='name' />
+          <Phone placeholder='Phone' type='tel' name='phone' />
           <Email placeholder='Email' type='email' name='email' />
           <Message placeholder='Message' type='text' name='message' />
           <Button type='submit'>Submit Form</Button>
-        </ContactInfo>
+        </ContactInfo> */}
+        <form name='contact' netlify>
+          <p>
+            <label>
+              Name <input type='text' name='name' />
+            </label>
+          </p>
+          <p>
+            <label>
+              Email <input type='email' name='email' />
+            </label>
+          </p>
+          <p>
+            <label>
+              Phone Number <input type='tel' name='phone' />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message <input type='text' name='message' />
+            </label>
+          </p>
+          <p>
+            <button type='submit'>Send</button>
+          </p>
+        </form>
       </Wrapper>
     </Container>
   );
