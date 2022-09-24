@@ -70,6 +70,8 @@ const Message = styled.input`
   text-align: left;
 `;
 
+const Parse = styled.input``;
+
 const Button = styled.button`
   margin-top: 20px;
 `;
@@ -104,7 +106,13 @@ const Contact = () => {
             </Social>
           </SocialContainer>
         </TitleContainer>
-        <ContactInfo method='POST' data-netlify='true'>
+        <ContactInfo
+          name='contact'
+          method='POST'
+          data-netlify='true'
+          onSubmit='submit'
+        >
+          <Parse type='hidden' name='form-name' value='contact'></Parse>
           <Name placeholder='Name' type='text' name='text'></Name>
           <Phone placeholder='Phone' type='tel' name='tel'></Phone>
           <Email placeholder='Email' type='email' name='email'></Email>
