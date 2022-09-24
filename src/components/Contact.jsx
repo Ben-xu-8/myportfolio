@@ -110,14 +110,15 @@ const Contact = () => {
           name='contact'
           method='POST'
           data-netlify='true'
-          data-netlify-honeypot='bot-field'
-          data-netlify-recaptcha='true'
+          // data-netlify-honeypot='bot-field'
+          // data-netlify-recaptcha='true'
+          onSubmit='submit'
         >
-          <Parse type='hidden' name='form-name' value='contact'></Parse>
-          <Name placeholder='Name' type='text' name='text'></Name>
-          <Phone placeholder='Phone' type='tel' name='tel'></Phone>
-          <Email placeholder='Email' type='email' name='email'></Email>
-          <Message placeholder='Message' type='text' name='message'></Message>
+          <Parse type='hidden' name='form-name' value='contact' />
+          <Name placeholder='Name' type='text' name='text' />
+          <Phone placeholder='Phone' type='tel' name='tel' />
+          <Email placeholder='Email' type='email' name='email' />
+          <Message placeholder='Message' type='text' name='message' />
           <Button type='submit'>Submit Form</Button>
         </ContactInfo>
       </Wrapper>
