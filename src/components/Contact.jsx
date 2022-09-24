@@ -70,12 +70,6 @@ const ContactInfo = styled.div`
 //   text-align: left;
 // `;
 
-// const Parse = styled.input``;
-
-// const Button = styled.button`
-//   margin-top: 20px;
-// `;
-
 const input = {
   width: '100%',
   marginBottom: '20px',
