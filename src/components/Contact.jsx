@@ -40,27 +40,6 @@ const ContactInfo = styled.div`
   padding-left: 50px;
 `;
 
-// const Name = styled.input`
-//   width: 100%;
-//   margin-bottom: 20px;
-//   border-radius: 10px;
-//   border: none;
-//   text-indent: 10px;
-// `;
-// const Email = styled.input`
-//   width: 100%;
-//   margin-bottom: 20px;
-//   border-radius: 10px;
-//   border: none;
-//   text-indent: 10px;
-// `;
-// const Phone = styled.input`
-//   width: 100%;
-//   margin-bottom: 20px;
-//   border-radius: 10px;
-//   border: none;
-//   text-indent: 10px;
-// `;
 // const Message = styled.input`
 //   width: 100%;
 //   height: 200px;
@@ -72,7 +51,15 @@ const ContactInfo = styled.div`
 
 const input = {
   width: '100%',
-  marginBottom: '20px',
+  marginBottom: '15px',
+  borderRadius: '10px',
+  border: 'none',
+  textIndent: '10px',
+};
+
+const message = {
+  width: '100%',
+  height: '150px',
   borderRadius: '10px',
   border: 'none',
   textIndent: '10px',
@@ -142,7 +129,7 @@ const Contact = () => {
               required
             />
             <input
-              style={input}
+              style={message}
               type='text'
               name='message'
               placeholder='Message'
