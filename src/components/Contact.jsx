@@ -33,48 +33,48 @@ const SocialIcon = styled.div`
 
 const Description = styled.p``;
 
-const ContactInfo = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-left: 50px;
-`;
+// const ContactInfo = styled.form`
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   padding-left: 50px;
+// `;
 
-const Name = styled.input`
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  text-indent: 10px;
-`;
-const Email = styled.input`
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  text-indent: 10px;
-`;
-const Phone = styled.input`
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  text-indent: 10px;
-`;
-const Message = styled.input`
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  border: none;
-  text-indent: 10px;
-  text-align: left;
-`;
+// const Name = styled.input`
+//   width: 100%;
+//   margin-bottom: 20px;
+//   border-radius: 10px;
+//   border: none;
+//   text-indent: 10px;
+// `;
+// const Email = styled.input`
+//   width: 100%;
+//   margin-bottom: 20px;
+//   border-radius: 10px;
+//   border: none;
+//   text-indent: 10px;
+// `;
+// const Phone = styled.input`
+//   width: 100%;
+//   margin-bottom: 20px;
+//   border-radius: 10px;
+//   border: none;
+//   text-indent: 10px;
+// `;
+// const Message = styled.input`
+//   width: 100%;
+//   height: 200px;
+//   border-radius: 10px;
+//   border: none;
+//   text-indent: 10px;
+//   text-align: left;
+// `;
 
-const Parse = styled.input``;
+// const Parse = styled.input``;
 
-const Button = styled.button`
-  margin-top: 20px;
-`;
+// const Button = styled.button`
+//   margin-top: 20px;
+// `;
 
 const Contact = () => {
   return (
