@@ -2,10 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   height: 90px;
   margin: 0px 56px;
+  ${mobile({
+    height: '120px',
+  })}
 `;
 
 const Wrapper = styled.div``;
@@ -14,6 +18,11 @@ const Navbar = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  ${mobile({
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  })}
 `;
 
 const Logo = styled.div``;
@@ -31,6 +40,11 @@ const NavElement = styled.div`
   cursor: pointer;
   font-size: 14px;
   margin-left: 30px;
+  ${mobile({
+    fontSize: '16px',
+    marginLeft: '0px',
+    padding: '0px 10px',
+  })}
 `;
 
 // const NavbarToggleIcon = styled.div``;

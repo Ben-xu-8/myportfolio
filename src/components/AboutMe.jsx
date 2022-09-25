@@ -11,20 +11,31 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
+  ${mobile({
+    margin: '0px',
+    padding: '20px',
+  })}
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 0px 0px 100px;
+  ${mobile({
+    margin: '0px',
+  })}
 `;
 
 const Top = styled.div`
   display: flex;
   margin: 0px;
   padding: 0px;
+  ${mobile({
+    flexDirection: 'column',
+  })}
 `;
 
 const TitleContainer = styled.div``;
@@ -35,8 +46,14 @@ const Title = styled(motion.h1)`
 `;
 const DescriptionContainer = styled.div``;
 const Info = styled(motion.div)`
-  flex: 1;
   padding-right: 200px;
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '0px',
+    alignItems: 'center',
+    justifyContent: 'center',
+  })}
 `;
 const Description = styled.p`
   font-size: 1.2rem;
@@ -47,7 +64,12 @@ const ImageContainer = styled.div`
 `;
 const Image = styled(motion.img)`
   border-radius: 5%;
-  width: 65%;
+  width: 400px;
+  height: 350px;
+  margin-right: 100px;
+  ${mobile({
+    width: '100%',
+  })}
 `;
 
 const Bottom = styled.div``;
@@ -80,7 +102,7 @@ const AboutMe = () => {
       <Wrapper>
         <Top id='about'>
           <Info
-            initial={{ x: -800, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
@@ -102,7 +124,7 @@ const AboutMe = () => {
           </Info>
           <ImageContainer>
             <Image
-              initial={{ x: 500, opacity: 0 }}
+              initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false }}
               transition={{

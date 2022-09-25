@@ -2,22 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { mobile } from '../responsive';
 
-const Container = styled.div``;
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const Container = styled.div`
+  ${mobile({
+    marginBottom: '20px',
+  })}
 `;
+const Wrapper = styled.div``;
 const ImageContainer = styled(motion.div)`
   height: max-content;
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  })}
 `;
 const Image = styled(motion.img)`
   max-height: 80%;
   width: 95%;
+  ${mobile({
+    width: '100%',
+  })}
 `;
 
 const Top = styled.div`
   display: flex;
+  ${mobile({
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  })}
 `;
 const Bottom = styled.div``;
 
@@ -27,6 +43,9 @@ const Description = styled(motion.span)`
   align-items: flex-start;
   justify-content: center;
   margin: 0px 0px 0px 50px;
+  ${mobile({
+    alignItems: 'center',
+  })}
 `;
 
 const Title = styled.h1`
@@ -38,6 +57,9 @@ const Title = styled.h1`
 `;
 const Intro = styled.h2`
   font-size: 1.2rem;
+  ${mobile({
+    textAlign: 'center',
+  })}
 `;
 const Banner = styled(motion.div)`
   display: flex;
@@ -61,6 +83,11 @@ const ArrowImage = styled.img`
   height: 70px;
 `;
 
+const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Introduction = () => {
   return (
     <Container>
@@ -69,7 +96,7 @@ const Introduction = () => {
           <ImageContainer>
             <Image
               src={'coffeeplant.jpeg'}
-              initial={{ x: -500, opacity: 0 }}
+              initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false }}
               transition={{
@@ -78,15 +105,17 @@ const Introduction = () => {
             />
           </ImageContainer>
           <Description
-            initial={{ x: 500, opacity: 0 }}
+            initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
               duration: 1.5,
             }}
           >
-            <Title>I'm Ben.</Title>
-            <Intro>A SOFTWARE ENGINEER.</Intro>
+            <Right>
+              <Title>I'm Ben.</Title>
+              <Intro>A SOFTWARE ENGINEER.</Intro>
+            </Right>
           </Description>
         </Top>
         <Bottom>

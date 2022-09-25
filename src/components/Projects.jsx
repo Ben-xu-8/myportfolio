@@ -7,12 +7,21 @@ import {
   faHtml5,
   faCss3,
   faJs,
-  faGithub,
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
+import { Icon } from '@iconify/react';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '75%',
+    margin: '0px',
+  })}
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -25,7 +34,16 @@ const Intro = styled.span``;
 const Title = styled.h1`
   font-weight: 400;
 `;
-const Header = styled(motion.div)``;
+const Header = styled(motion.div)`
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    fontSize: '14px',
+  })}
+`;
 const Project = styled.div`
   display: flex;
   width: 100%;
@@ -48,12 +66,14 @@ const ProjectImg = styled.img`
 const ProjectPanel = styled.div`
   height: 100%;
   width: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   opacity: 0;
   position: absolute;
   justify-content: center;
   align-items: center;
+  transition: 0.5s ease;
   &:hover {
     opacity: 0.85;
     background-color: gray;
@@ -63,10 +83,28 @@ const ProjectPanel = styled.div`
 `;
 const ProjectInfo = styled.div`
   text-align: center;
+  width: 450px;
+  overflow: hidden;
 `;
-const ProjectIcon = styled.div``;
+const ProjectIcon = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+const FontName = styled.div``;
 const ProjectTitle = styled.h1``;
-const ProjectDesc = styled.span``;
+const ProjectDesc = styled.span`
+  width: 100%;
+`;
+const Group = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 200px;
+`;
 const ProjectButtons = styled.div`
   display: flex;
   align-content: center;
@@ -75,6 +113,12 @@ const ProjectButtons = styled.div`
 const ProjectLink = styled.button`
   margin: 10px;
   padding: 10px;
+  border-radius: 20px;
+  &:hover {
+    background-color: #3d8361;
+    color: white;
+    border-radius: 20px;
+  }
 `;
 
 const Projects = () => {
@@ -94,8 +138,8 @@ const Projects = () => {
         </Header>
         <Project>
           <ProjectItem
-            initial={{ y: -200, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
               duration: 1.5,
@@ -110,7 +154,18 @@ const Projects = () => {
                   communicate with friends
                 </ProjectDesc>
                 <ProjectIcon>
-                  React <FontAwesomeIcon icon={faReact} />
+                  <Group>
+                    <FontAwesomeIcon icon={faReact} />
+                    <FontName>React</FontName>
+                  </Group>
+                  <Group>
+                    <FontAwesomeIcon icon={faSass} />
+                    <FontName>Sass</FontName>
+                  </Group>
+                  <Group>
+                    <Icon icon='teenyicons:firebase-solid' />
+                    <FontName>Firebase</FontName>
+                  </Group>
                 </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
@@ -135,8 +190,8 @@ const Projects = () => {
             </ProjectPanel>
           </ProjectItem>
           <ProjectItem
-            initial={{ y: -200, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
               duration: 1.5,
@@ -150,6 +205,24 @@ const Projects = () => {
                   An E-Commerce Website built on React that allows users to
                   browse, create an account, and purchase Pokemon
                 </ProjectDesc>
+                <ProjectIcon>
+                  <Group>
+                    <Icon icon='bxl:mongodb' />
+                    <FontName>MongoDB</FontName>
+                  </Group>
+                  <Group>
+                    <Icon icon='simple-icons:express' />
+                    <FontName>Express</FontName>
+                  </Group>
+                  <Group>
+                    <FontAwesomeIcon icon={faReact} />
+                    <FontName>React</FontName>
+                  </Group>
+                  <Group>
+                    <Icon icon='akar-icons:node-fill' />
+                    <FontName>Node</FontName>
+                  </Group>
+                </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
                     onClick={(e) => {
@@ -174,8 +247,8 @@ const Projects = () => {
             </ProjectPanel>
           </ProjectItem>
           <ProjectItem
-            initial={{ y: 200, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
               duration: 1.5,
@@ -190,7 +263,18 @@ const Projects = () => {
                   the chicken as a corn on the cob
                 </ProjectDesc>
                 <ProjectIcon>
-                  React <FontAwesomeIcon icon={faHtml5} />
+                  <Group>
+                    <FontAwesomeIcon icon={faHtml5} />
+                    <FontName>HTML5</FontName>
+                  </Group>
+                  <Group>
+                    <FontAwesomeIcon icon={faCss3} />
+                    <FontName>CSS3</FontName>
+                  </Group>
+                  <Group>
+                    <FontAwesomeIcon icon={faJs} />
+                    <FontName>Javascript</FontName>
+                  </Group>
                 </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
