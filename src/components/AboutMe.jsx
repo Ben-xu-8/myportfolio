@@ -44,7 +44,7 @@ const TitleContainer = styled.div``;
 const Title = styled(motion.h1)`
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
 `;
 const DescriptionContainer = styled.div``;
