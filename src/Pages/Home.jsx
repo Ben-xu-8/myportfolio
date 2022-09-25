@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 
 const Container = styled.div`
   overflow-x: hidden;
+  overflow-y: hidden;
 `;
 
 const Home = () => {

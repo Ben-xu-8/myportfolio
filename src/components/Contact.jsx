@@ -4,20 +4,35 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { motion } from 'framer-motion';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   background-color: #cee5d0;
   display: flex;
-  height: 400px;
+  height: 100%;
+  width: 100%;
 `;
 const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   width: 75%;
   padding: 40px 0px 40px 200px;
+  ${mobile({
+    flexDirection: 'column',
+    width: '100%',
+    padding: '0px',
+  })}
 `;
 
-const TitleContainer = styled.div``;
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${mobile({
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '10px',
+  })}
+`;
 const Title = styled.h1`
   font-weight: 400;
 `;
@@ -26,28 +41,34 @@ const SocialContainer = styled.div``;
 const Social = styled.div`
   display: flex;
   margin-top: 20px;
+  ${mobile({
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: '20px',
+  })}
 `;
 const SocialIcon = styled.div`
   margin-left: 40px;
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  ${mobile({
+    textAlign: 'center',
+  })}
+`;
 
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-left: 50px;
+  ${mobile({
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '0px',
+    width: '90%',
+  })}
 `;
-
-// const Message = styled.input`
-//   width: 100%;
-//   height: 200px;
-//   border-radius: 10px;
-//   border: none;
-//   text-indent: 10px;
-//   text-align: left;
-// `;
 
 const input = {
   width: '100%',
@@ -66,12 +87,20 @@ const message = {
 };
 
 const button = {
-  marginTop: '20px',
+  margin: '20px 0px',
+};
+
+const form = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '90%',
 };
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id='contact'>
       <Wrapper
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -105,6 +134,7 @@ const Contact = () => {
             action='/success'
             method='POST'
             data-netlify='true'
+            style={form}
           >
             <input type='hidden' name='form-name' value='contact' />
             <input

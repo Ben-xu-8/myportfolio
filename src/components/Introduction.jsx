@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import { mobile } from '../responsive';
 
 const Container = styled.div`
+  overflow: hidden;
   ${mobile({
     marginBottom: '20px',
   })}

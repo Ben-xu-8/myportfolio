@@ -14,19 +14,21 @@ import { mobile } from '../responsive';
 
 const Container = styled.div`
   margin: 0px 0px 30px 100px;
+  overflow: hidden;
   ${mobile({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '75%',
-    margin: '0px',
-  })}
+    margin: '30px 0px 0px 0px',
+  })};
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0px 0px 0px 100px;
+  ${mobile({
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0px',
+    width: '100%',
+  })}
 `;
 
 const Intro = styled.span``;
@@ -57,6 +59,11 @@ const ProjectItem = styled(motion.div)`
   position: relative;
   display: flex;
   margin: 20px 20px 0px 0px;
+  ${mobile({
+    margin: '5px 0px',
+    width: '100%',
+    height: '100%',
+  })}
 `;
 const ProjectImg = styled.img`
   height: 100%;
@@ -85,6 +92,9 @@ const ProjectInfo = styled.div`
   text-align: center;
   width: 450px;
   overflow: hidden;
+  ${mobile({
+    width: '100%',
+  })}
 `;
 const ProjectIcon = styled.div`
   display: flex;

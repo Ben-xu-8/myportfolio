@@ -7,9 +7,10 @@ import { mobile } from '../responsive';
 const Container = styled.div`
   height: 90px;
   margin: 0px 56px;
+  overflow: hidden;
   ${mobile({
     height: '120px',
-  })}
+  })};
 `;
 
 const Wrapper = styled.div``;

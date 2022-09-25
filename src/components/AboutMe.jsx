@@ -21,9 +21,9 @@ const Container = styled.div`
   })}
 `;
 const Wrapper = styled.div`
+  margin: 0px 0px 30px 100px;
   display: flex;
   flex-direction: column;
-  margin: 50px 0px 0px 100px;
   ${mobile({
     margin: '0px',
   })}
@@ -33,20 +33,24 @@ const Top = styled.div`
   display: flex;
   margin: 0px;
   padding: 0px;
+  height: 100%;
+  width: 100%;
   ${mobile({
     flexDirection: 'column',
-  })}
+  })};
 `;
 
 const TitleContainer = styled.div``;
 const Title = styled(motion.h1)`
   margin: 0;
   padding: 0;
+  text-align: center;
   font-weight: 400;
 `;
 const DescriptionContainer = styled.div``;
 const Info = styled(motion.div)`
-  padding-right: 200px;
+  display: flex;
+  flex-direction: column;
   ${mobile({
     display: 'flex',
     flexDirection: 'column',
@@ -56,17 +60,22 @@ const Info = styled(motion.div)`
   })}
 `;
 const Description = styled.p`
+  width: 100%;
+  height: 100%;
   font-size: 1.2rem;
 `;
 const ImageContainer = styled.div`
-  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 5px;
 `;
 const Image = styled(motion.img)`
   border-radius: 5%;
   width: 400px;
   height: 350px;
-  margin-right: 100px;
+  margin: 0px 75px;
   ${mobile({
     width: '100%',
   })}
@@ -74,7 +83,9 @@ const Image = styled(motion.img)`
 
 const Bottom = styled.div``;
 
-const Skill = styled.div``;
+const Skill = styled.div`
+  height: max-content;
+`;
 const SkillIconsDescription = styled.div`
   display: flex;
   justify-content: center;
