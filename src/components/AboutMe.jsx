@@ -46,6 +46,9 @@ const Title = styled(motion.h1)`
   padding: 0;
   text-align: left;
   font-weight: 400;
+  ${mobile({
+    textAlign: 'center',
+  })}
 `;
 const DescriptionContainer = styled.div``;
 const Info = styled(motion.div)`
@@ -164,7 +167,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  duration: 1.5,
+                  duration: 0.5,
                 }}
               >
                 <FontAwesomeIcon icon={faHtml5} />
@@ -175,7 +178,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 0.3,
+                  delay: 0.2,
                   duration: 0.5,
                 }}
               >
@@ -187,7 +190,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 0.6,
+                  delay: 0.4,
                   duration: 0.5,
                 }}
               >
@@ -199,7 +202,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 0.9,
+                  delay: 0.6,
                   duration: 0.5,
                 }}
               >
@@ -211,7 +214,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 1.2,
+                  delay: 0.8,
                   duration: 0.5,
                 }}
               >
@@ -223,7 +226,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 1.5,
+                  delay: 1,
                   duration: 0.5,
                 }}
               >
@@ -235,7 +238,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 1.8,
+                  delay: 1.2,
                   duration: 0.5,
                 }}
               >
@@ -247,7 +250,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 2.1,
+                  delay: 1.4,
                   duration: 0.5,
                 }}
               >
@@ -259,7 +262,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 2.4,
+                  delay: 1.6,
                   duration: 0.5,
                 }}
               >
@@ -271,7 +274,7 @@ const AboutMe = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{
-                  delay: 2.7,
+                  delay: 1.8,
                   duration: 0.5,
                 }}
               >

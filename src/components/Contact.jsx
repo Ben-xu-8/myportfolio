@@ -90,6 +90,9 @@ const message = {
 
 const button = {
   margin: '20px 0px',
+  backgroundColor: ' #3d8361',
+  color: 'white',
+  borderRadius: '20px',
 };
 
 const form = {
