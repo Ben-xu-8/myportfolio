@@ -37,7 +37,9 @@ const Title = styled.h1`
   font-weight: 400;
 `;
 
-const SocialContainer = styled.div``;
+const SocialContainer = styled.div`
+  cursor: pointer;
+`;
 const Social = styled.div`
   display: flex;
   margin-top: 20px;
@@ -118,12 +120,28 @@ const Contact = () => {
           </Description>
           <SocialContainer>
             <Social>
-              <GitHubIcon />
+              <GitHubIcon
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'https://github.com/Ben-xu-8';
+                }}
+              />
               <SocialIcon>
-                <LinkedInIcon />
+                <LinkedInIcon
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href =
+                      'https://www.linkedin.com/in/benjamin-xu-3820a1164/';
+                  }}
+                />
               </SocialIcon>
               <SocialIcon>
-                <EmailIcon />
+                <EmailIcon
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = 'mailto:xuben1996@gmail.com';
+                  }}
+                />
               </SocialIcon>
             </Social>
           </SocialContainer>
@@ -169,12 +187,6 @@ const Contact = () => {
               Submit
             </button>
           </form>
-          {/* <Parse type='hidden' name='form-name' value='contact' />
-          <Name placeholder='Name' type='text' name='name' />
-          <Phone placeholder='Phone' type='tel' name='phone' />
-          <Email placeholder='Email' type='email' name='email' />
-          <Message placeholder='Message' type='text' name='message' />
-          <Button type='submit'>Submit Form</Button> */}
         </ContactInfo>
       </Wrapper>
     </Container>

@@ -104,9 +104,25 @@ const Footer = () => {
         </Left>
         <SocialContainer>
           <Social>
-            <GitHubIcon />
-            <LinkedInIcon />
-            <EmailIcon />
+            <GitHubIcon
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'https://github.com/Ben-xu-8';
+              }}
+            />
+            <LinkedInIcon
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  'https://www.linkedin.com/in/benjamin-xu-3820a1164/';
+              }}
+            />
+            <EmailIcon
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'mailto:xuben1996@gmail.com';
+              }}
+            />
           </Social>
         </SocialContainer>
       </Wrapper>
