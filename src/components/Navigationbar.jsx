@@ -10,6 +10,7 @@ const Container = styled.div`
   overflow: hidden;
   ${mobile({
     height: '120px',
+    margin: '0  ',
   })};
 `;
 
@@ -36,13 +37,13 @@ const Left = styled.div``;
 const Right = styled.div``;
 const Nav = styled.div`
   display: flex;
+  width: 100%;
 `;
 const NavElement = styled.div`
   cursor: pointer;
   font-size: 14px;
   margin-left: 30px;
   ${mobile({
-    fontSize: '16px',
     marginLeft: '0px',
     padding: '0px 10px',
   })}
