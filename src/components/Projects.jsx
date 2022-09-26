@@ -181,7 +181,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href = 'https://connectchat.netlify.app/';
+                      window.open('https://connectchat.netlify.app/');
                     }}
                   >
                     View Project
@@ -189,8 +189,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href =
-                        'https://github.com/Ben-xu-8/Message_App';
+                      window.open('https://github.com/Ben-xu-8/Message_App');
                     }}
                   >
                     View Github
@@ -237,8 +236,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href =
-                        'https://poke-mart-center.herokuapp.com/';
+                      window.open('https://poke-mart-center.herokuapp.com/');
                     }}
                   >
                     View Project
@@ -246,8 +244,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href =
-                        'https://github.com/Ben-xu-8/poke-mart-mern';
+                      window.open('https://github.com/Ben-xu-8/poke-mart-mern');
                     }}
                   >
                     View Github
@@ -290,7 +287,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href = 'https://corngame.netlify.app/';
+                      window.open('https://corngame.netlify.app/');
                     }}
                   >
                     View Project
@@ -298,8 +295,7 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href =
-                        'https://github.com/Ben-xu-8/Corn_Game';
+                      window.open('https://github.com/Ben-xu-8/Corn_Game');
                     }}
                   >
                     View Github

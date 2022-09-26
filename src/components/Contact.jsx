@@ -126,15 +126,16 @@ const Contact = () => {
               <GitHubIcon
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href = 'https://github.com/Ben-xu-8';
+                  window.open('https://github.com/Ben-xu-8');
                 }}
               />
               <SocialIcon>
                 <LinkedInIcon
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href =
-                      'https://www.linkedin.com/in/benjamin-xu-3820a1164/';
+                    window.open(
+                      'https://www.linkedin.com/in/benjamin-xu-3820a1164/'
+                    );
                   }}
                 />
               </SocialIcon>
@@ -142,7 +143,7 @@ const Contact = () => {
                 <EmailIcon
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = 'mailto:xuben1996@gmail.com';
+                    window.open('mailto:xuben1996@gmail.com');
                   }}
                 />
               </SocialIcon>
