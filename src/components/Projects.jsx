@@ -304,6 +304,53 @@ const Projects = () => {
               </ProjectInfo>
             </ProjectPanel>
           </ProjectItem>
+          <ProjectItem
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
+            <ProjectImg src='project4.png' />
+            <ProjectPanel>
+              <ProjectInfo>
+                <ProjectTitle>Corn Runner</ProjectTitle>
+                <ProjectDesc>
+                  A cafe based daily organizer where users can add a to do list,
+                  add items to the calendar, and listen to music
+                </ProjectDesc>
+                <ProjectIcon>
+                  <Group>
+                    <FontAwesomeIcon icon={faReact} />
+                    <FontName>React</FontName>
+                  </Group>
+                  <Group>
+                    <FontAwesomeIcon icon={faSass} />
+                    <FontName>Sass</FontName>
+                  </Group>
+                </ProjectIcon>
+                <ProjectButtons>
+                  <ProjectLink
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('');
+                    }}
+                  >
+                    View Project
+                  </ProjectLink>
+                  <ProjectLink
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('');
+                    }}
+                  >
+                    View Github
+                  </ProjectLink>
+                </ProjectButtons>
+              </ProjectInfo>
+            </ProjectPanel>
+          </ProjectItem>
         </Project>
       </Wrapper>
     </Container>
