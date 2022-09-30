@@ -305,7 +305,7 @@ const Projects = () => {
             </ProjectPanel>
           </ProjectItem>
           <ProjectItem
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: 200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false }}
             transition={{
