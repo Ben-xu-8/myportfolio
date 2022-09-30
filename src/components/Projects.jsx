@@ -315,7 +315,7 @@ const Projects = () => {
             <ProjectImg src='project4.png' />
             <ProjectPanel>
               <ProjectInfo>
-                <ProjectTitle>Corn Runner</ProjectTitle>
+                <ProjectTitle>Koffe.</ProjectTitle>
                 <ProjectDesc>
                   A cafe based daily organizer where users can add a to do list,
                   add items to the calendar, and listen to music
