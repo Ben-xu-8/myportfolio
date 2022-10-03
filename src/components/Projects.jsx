@@ -318,7 +318,7 @@ const Projects = () => {
                 <ProjectTitle>Koffe.</ProjectTitle>
                 <ProjectDesc>
                   A cafe based daily organizer where users can add a to do list,
-                  add items to the calendar, and listen to music
+                  add items to the calendar, and listen to music (In Progress)
                 </ProjectDesc>
                 <ProjectIcon>
                   <Group>
@@ -342,7 +342,9 @@ const Projects = () => {
                   <ProjectLink
                     onClick={(e) => {
                       e.preventDefault();
-                      window.open('');
+                      window.open(
+                        'https://github.com/Ben-xu-8/coffee_shop_mood'
+                      );
                     }}
                   >
                     View Github
