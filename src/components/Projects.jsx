@@ -332,10 +332,10 @@ const Projects = () => {
                 </ProjectIcon>
                 <ProjectButtons>
                   <ProjectLink
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.open('');
-                    }}
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   window.open('');
+                  // }}
                   >
                     View Project
                   </ProjectLink>
